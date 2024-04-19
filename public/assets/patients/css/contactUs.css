@@ -1,0 +1,66 @@
+ .contact-us-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    justify-content: center
+}
+
+.contact-us-heading {
+    position: relative;
+    color: #000000;
+    margin-left: 2%;
+    font: 600 50px sans-serif;
+}
+
+.contact-us-description {
+    color: #000;
+    text-align: center;
+    margin-top: 64px;
+    width: 670px;
+    font: 800 24px Roboto, sans-serif;
+}
+
+.contact-us-content {
+    margin-top: 100px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-us-columns {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 23px;
+}
+
+.contact-us-image-column {
+    line-height: normal;
+    width: 30%;
+    margin-left: 0;
+}
+
+.contact-us-image {
+    object-position: center;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.contact-us-form-column {
+    line-height: normal;
+    width: 70%;
+    margin-left: 50px;
+}
+
+.contact-us-form-heading {
+    position: relative;
+    color: #000000;
+    font: 600 50px sans-serif;
+}
+
+.contact-us-form-row {
+    display: flex;
+    gap: 20px;
+    text-align: center;
+}

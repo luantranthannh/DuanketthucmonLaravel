@@ -1,0 +1,262 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Header Styles */
+.menu-1 a:hover,
+.menu-1 a.active {
+  color: #1CBBD0;
+  /* Màu của liên kết khi di chuột vào hoặc khi nó được chọn */
+}
+
+#sign-in-up #sign-in-link:hover,
+#sign-in-up #sign-in-link.active {
+  color: #1CBBD0;
+  text-decoration: none;
+  /* Loại bỏ gạch chân*/
+}
+
+#sign-in-up a {
+  color: #000000;
+  font-family: sans-serif;
+  margin: auto 0;
+  font-size: 18px;
+  color: #000;
+  font-weight: 700;
+}
+
+#header {
+  background-color: #fff;
+  padding: 30px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: -34px;
+
+}
+
+#header-content,
+#header-actions {
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  width: 100px;
+  height: auto;
+  margin-right: 20px;
+}
+
+#header-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#location-icon {
+  width: 30px;
+  height: auto;
+  margin-right: 10px;
+}
+
+#header-location {
+  font-size: 16px;
+  margin-right: 20px;
+}
+
+#book-now {
+  background-color: #e61f57;
+  color: #fff;
+  justify-content: center;
+  padding: 15px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Body Styles */
+.menu {
+  border-radius: 40px;
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.25);
+  border-color: rgba(0, 0, 0, 0.08);
+  border-style: solid;
+  border-width: 1px;
+  background-color: #fff;
+  align-self: center;
+  object-fit: contain;
+  width: 86%;
+  gap: 20px;
+  font-size: 18px;
+  color: #000;
+  font-weight: 700;
+  justify-content: space-between;
+  padding: 14px 71px;
+  margin-left: 7%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.menu-1 {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.name1,
+.name2,
+.name3,
+.name4,
+.name5,
+.name6,
+.name8,
+.name9 {
+  font-family: sans-serif;
+  margin: auto 0;
+  text-decoration: none;
+  color: #000000;
+}
+
+
+
+#profile-image {
+  order: 999;
+  justify-content: flex-end;
+  position: absolute;
+  top: 5px;
+  right: 50px;
+}
+
+#profile-links {
+  order: 999;
+  justify-content: flex-end;
+  position: absolute;
+  top: 60px;
+  right: -106px;
+}
+
+.name7 {
+  display: flex;
+  gap: 25px;
+  justify-content: space-between;
+}
+
+/* dkdnj */
+.container-section {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-section2 {
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  min-height: 644px;
+  width: 100%;
+  align-items: start;
+  font-size: 20px;
+  font-weight: 800;
+  justify-content: center;
+  padding: 80px 60px;
+}
+
+.mySlides {
+  display:none;
+  position: absolute;
+  inset: 0;
+  height: 90%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.container-section3 {
+  position: relative;
+  display: flex;
+  width: 500px;
+  flex-direction: column;
+  margin: 30px 0 50px 50px;
+}
+
+.container-section4 {
+  border-radius: 25px;
+  background-color: #fff;
+  align-self: start;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 9px 26px;
+}
+
+.img-2 {
+  object-fit: auto;
+  object-position: center;
+  width: 40px;
+  align-self: start;
+}
+
+.container-section5 {
+  font-family: sans-serif;
+  flex-grow: 1;
+  flex-basis: auto;
+  margin: auto 0;
+}
+
+.container-section6 {
+  margin-top: 33px;
+  font: 700 50px sans-serif;
+}
+
+.container-section7 {
+  font-family: sans-serif;
+  font-weight: 400;
+  margin-top: 38px;
+}
+
+.submit {
+  font-family: sans-serif;
+  border-radius: 50px;
+  background-color: #e61f57;
+  align-self: start;
+  margin-top: 30px;
+  color: #fff;
+  justify-content: center;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+
+#user-name {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#profile-links {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 120px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+#profile-links a {
+  color: black;
+  padding: 10px 20px;
+  width: 100%;
+  text-decoration: none;
+  display: block;
+}
+
+#profile-links a:hover {
+  background-color: #f1f1f1;
+}
+
+#button-addon2 {
+  position: absolute;
+  right: 120;
+  border-radius: 20px;
+}

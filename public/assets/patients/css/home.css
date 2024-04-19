@@ -1,0 +1,278 @@
+.container {
+    margin-left: 20px;
+    font: 20px sans-serif;
+  
+}
+
+.grid-container {
+    padding-right: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.columns {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    color: #767676;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.number {
+    font-size: 45px;
+    color: rgba(28, 187, 208, 1);
+}
+
+.description {
+    font-weight: 400;
+    font-size: 20px;
+    color: rgba(118, 118, 118, 1);
+}
+
+.custom-container {
+    border-radius: 20px;
+    background-color: #1cbbd0;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 76px 0;
+    margin: 50px;
+    margin-left: 75px;
+    width: 88%;
+    height: 300px;
+    margin-bottom: 20%;
+}
+
+.custom-container-2 {
+    display: flex;
+    gap: 20px;
+    color: #fff;
+}
+
+.custom-container-3 {
+    font: 700 40px sans-serif;
+}
+
+.custom-container-4 {
+    align-self: start;
+    flex-grow: 1;
+    flex-basis: auto;
+    font: 400 20px sans-serif;
+}
+
+.custom-container-5 {
+    z-index: 10;
+    margin-top: 35px;
+}
+
+.custom-container-6 {
+    gap: 20px;
+    display: flex;
+}
+
+.columns {
+    display: flex;
+}
+
+.custom-container-7 {
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-size: 23px;
+    color: #000;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+    padding: 30px 40px;
+}
+
+.img {
+    object-fit: auto;
+    object-position: center;
+    width: 55px;
+    align-self: center;
+}
+
+.custom-container-8 {
+    font-family: Roboto, sans-serif;
+    align-self: start;
+    margin-top: 28px;
+}
+
+.column-2 {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 25%;
+    margin-left: 20px;
+}
+
+.body {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-left: 30px;
+}
+
+.left-2 {
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: start;
+    font-size: 20px;
+    font-weight: 800;
+    padding: 75px 60px;
+}
+
+.image {
+    position: absolute;
+    inset: 0;
+    width: 92%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.left-3 {
+    position: relative;
+    color: #000000;
+    margin-left: 2%;
+    font: 600 50px sans-serif;
+}
+
+.left-4 {
+    position: relative;
+    color: #767676;
+    font-weight: 400;
+    width: 440px;
+    margin: 15px;
+    margin-left: 2%;
+}
+
+.left-5 {
+    position: relative;
+    border-radius: 50px;
+    border-color: rgba(255, 255, 255, 1);
+    background-color: #e61f57;
+    margin-top: 30px;
+    justify-content: center;
+    padding: 22px 20px;
+    margin-left: 2%;
+    color: #fff;
+    text-decoration: none
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    display: flex;
+    font-size: 24px;
+    color: #000;
+    /* font-weight: 500; */
+    margin-left: 5%;
+}
+
+.right-1 {
+    padding: 0;
+    margin: 0;
+}
+
+.right-2 {
+    display: flex;
+    gap: 20px;
+}
+
+.image1 {
+    object-fit: auto;
+    object-position: center;
+    width: 65px;
+}
+
+.right-3 {
+    font: 550 25px sans-serif;
+    flex-grow: 1;
+    flex-basis: auto;
+    margin: auto 0;
+}
+
+.right-4 {
+    color: #767676;
+    margin: 22px;
+    font: 400 20px sans-serif;
+    width: 100%;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    padding: 0 75px;
+}
+
+.h1 {
+    color: #000;
+    width: 100%;
+    font: 600 55px sans-serif;
+}
+
+.h2 {
+    margin-top: 52px;
+    width: 100%;
+    display: flex;
+}
+
+.h3 {
+    gap: 20px;
+    display: flex;
+}
+
+.images1 {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 25%;
+    margin-left: 0px;
+}
+
+
+.doctor {
+    object-fit: auto;
+    object-position: center;
+    flex-grow: 1;
+    border-radius: 20px;
+}
+
+
+.title {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 30%;
+    margin-left: 20px;
+}
+
+
+.titles {
+    color: #767676;
+    font: 35px sans-serif;
+    width: 155%;
+}
+
+.button {
+    object-fit: auto;
+    object-position: center;
+    width: 40px;
+    align-self: center;
+    margin: 30px;
+}

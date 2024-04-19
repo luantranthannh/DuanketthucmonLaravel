@@ -1,0 +1,94 @@
+Cách chạy: cái schedule trên máy tính
+1Mở Task Scheduler trên máy tính của bạn. Bạn có thể tìm nó bằng cách sử dụng hộp tìm kiếm hoặc tìm trong Control Panel.
+
+2Trong Task Scheduler, chọn "Create Basic Task" hoặc "Create Task" (tùy thuộc vào phiên bản của Windows bạn đang sử dụng).
+
+3Đặt tên cho nhiệm vụ của bạn và cung cấp mô tả nếu cần.
+
+4Trong cửa sổ tiếp theo, chọn "Daily", "Weekly" hoặc "Monthly" (tuỳ thuộc vào tần suất bạn muốn chạy nhiệm vụ).
+
+5Chọn thời gian và ngày bạn muốn nhiệm vụ được chạy.
+
+6Trong phần "Action", chọn "Start a program".
+
+7Trong trường "Program/script", điền đường dẫn đến thực thi PHP trên máy tính của bạn. Đường dẫn mặc định của PHP trên Windows có thể là "C:\php\php.exe". Nếu bạn không có PHP được cài đặt, bạn cần cài đặt PHP trước.
+
+8Trong trường "Add arguments (optional)", nhập đường dẫn đầy đủ đến tệp artisan trong dự án Laravel của bạn, theo sau là lệnh schedule:run. Ví dụ, "D:\new-laravel-project\artisan schedule:run".
+
+9Trong trường "Start in (optional)", nhập đường dẫn thư mục của dự án Laravel của bạn. Ví dụ, "D:\new-laravel-project".
+
+10Nhấp vào "Next" và kiểm tra lại các cài đặt của bạn.
+
+11Nhấp vào "Finish" để hoàn thành việc tạo nhiệm vụ.
+
+
+//Cách update status
+1. Open your terminal or command prompt.
+
+2. Navigate to your Laravel project directory.
+
+3. Run the following command to generate a new artisan command file:
+php artisan make:command UpdateBookingStatusCommand
+4. This will generate a new file UpdateBookingStatusCommand.php inside the app/Console/Commands directory.
+5. Open the generated file UpdateBookingStatusCommand.php and define the command name, description, and handle method. Modify the file as follows:
+<?php
+
+namespace App\Console\Commands;
+
+use Illuminate\Console\Command;
+use App\Models\Booking;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
+
+class UpdateBookingStatusCommand extends Command
+{
+    protected $signature = 'booking:update-status';
+    protected $description = 'Update the status of bookings based on time';
+
+    public function handle()
+    {
+        $currentDateTime = Carbon::now();
+
+        DB::beginTransaction();
+
+        try {
+            $bookings = Booking::where('status', 'processing')
+                ->where('date_booking', '<=', $currentDateTime)
+                ->join('list_time_doctor', 'list_time_doctor.id', '=', 'booking.time_id')
+                ->where('list_time_doctor.time_end', '<=', $currentDateTime)
+                ->select('booking.*')
+                ->lockForUpdate()
+                ->get();
+
+            foreach ($bookings as $booking) {
+                $booking->status = 'completed';
+                $booking->save();
+            }
+
+            DB::commit();
+        } catch (\Exception $e) {
+            DB::rollback();
+            Log::error('Error updating booking status: ' . $e->getMessage());
+        }
+
+        $this->info('Booking status updated successfully.');
+    }
+}
+
+6. Once you have defined the custom command, you need to register it in the app/Console/Kernel.php file. Open the file and add the following line to the commands array:
+protected $commands = [
+    \App\Console\Commands\UpdateBookingStatusCommand::class,
+];
+7. Now you can run the command booking:update-status in your terminal or schedule it to run automatically using Laravel's task scheduling.
+To run the command manually, use the following command:
+php artisan booking:update-status
+
+To schedule the command to run automatically, you can define the schedule in the schedule method of the app/Console/Kernel.php
+
+protected function schedule(Schedule $schedule)
+{
+    $schedule->command('booking:update-status')->everyMinute();
+}
+
+8. Finally, to activate the task scheduling
